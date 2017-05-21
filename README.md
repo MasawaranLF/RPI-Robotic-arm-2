@@ -8,7 +8,7 @@ RPI IOT for ROBOT ARM 2 [ MR-999 ] With battery
 * [5V RELAY 8-CH 10A 250VAC GTTH-1015](https://gravitechthai.com/product_detail.php?d=859/) - For Controling motor
 * [ROBOT ARM 2 (MR-999)](http://www.elekit.co.jp/en/product/MR-999R) - ARM
 
-## Wireing
+## Wiring
 
 RPI
 
@@ -57,6 +57,7 @@ Relay
   [-](IN8)[]
           [-] >> Bread board -
   ----------
+  
 ```
 
 
@@ -90,6 +91,7 @@ Motor
 [x] >> Bread Board L4 (Joint 2)
 [x] >> Bread Board L4 (Joint 4)
 [x] >> Bread Board -
+
 
 ```
 
