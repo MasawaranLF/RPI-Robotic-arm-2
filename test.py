@@ -1,4 +1,5 @@
 
+
 import RPi.GPIO as GPIO
 import time
 
@@ -6,13 +7,17 @@ _GrapOpen = 17
 _GrapClose = 18
 _AnkleOpen = 27
 _AnkleClose = 22
+_BaseCW = 23
+_BaseCCW = 24
+_AnkelCW =10
+_AnkelCCW =9
 
 On = 0
 Off = 1
 
 #Setup GPIO
 def GPIOsetup():
-    GPIO.setwarnings(False)
+        GPIO.setwarnings(False)
         GPIO.setmode(GPIO.BCM)
         GPIO.setup(_GrapOpen, GPIO.OUT)
         GPIO.setup(_GrapClose, GPIO.OUT)
@@ -25,7 +30,7 @@ def GPIOsetup():
         GPIO.output(_AnkleClose, Off)
 
 def GrapOpen():
-    GPIOsetup()
+        GPIOsetup()
         print "Test: GRAP Open"
         GPIO.output(_GrapOpen, On)
         GPIO.output(_GrapClose, Off)
@@ -35,7 +40,7 @@ def GrapOpen():
         return()
 
 def GrapClose():
-    GPIOsetup()
+        GPIOsetup()
         print "Test: GRAP CLOSE"
         GPIO.output(_GrapClose, On)
         GPIO.output(_GrapOpen, Off)
@@ -45,7 +50,7 @@ def GrapClose():
         return()
 
 def AnkleOpen():
-    GPIOsetup()
+        GPIOsetup()
         print "Test: Ankle Open"
         GPIO.output(_AnkleOpen, On)
         GPIO.output(_AnkleClose, Off)
@@ -55,7 +60,7 @@ def AnkleOpen():
         return()
 
 def AnkleClose():
-    GPIOsetup()
+        GPIOsetup()
         print "Test: Ankle CLOSE"
         GPIO.output(_AnkleClose, On)
         GPIO.output(_AnkleOpen, Off)
