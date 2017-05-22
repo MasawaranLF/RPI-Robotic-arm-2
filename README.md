@@ -20,41 +20,45 @@ RPI
 [ . ][ . ]
 [ x ][ x ] >> To Relay IN1,IN2
 [ x ][ . ] >> To Relay IN3
+[ x ][ x ] >> To Relay IN4,IN5
+[ . ][ x ] >> To Relay IN6
+[ x ][ . ] >> To Relay IN7
+[ x ][ . ] >> To Relay IN8
 ```
 Relay
 
 ```
   ----------
           []
-  [+](IN1)[x]>> Bread Board L1
+  [+](IN1)[x] >> Bread Board L1
           [+] >> Bread board +
   ----------
           []
-  [-](IN2)[x]>> Bread Board L1
+  [-](IN2)[x] >> Bread Board L1
           [-] >> Bread board -
   ----------
           []
-  [+](IN3)[]
+  [+](IN3)[x] >> Bread Board L2
           [+] >> Bread board +
   ----------
           []
-  [-](IN4)[]
+  [-](IN4)[x] >> Bread Board L2
           [-] >> Bread board -
   ----------
           []
-  [+](IN5)[]
+  [+](IN5)[x] >> Bread Board L3
           [+] >> Bread board +
   ----------
           []
-  [-](IN6)[]
+  [-](IN6)[x] >> Bread Board L3
           [-] >> Bread board -
   ----------
           []
-  [+](IN7)[]
+  [+](IN7)[x] >> Bread Board L5
           [+] >> Bread board +
   ----------
           []
-  [-](IN8)[]
+  [-](IN8)[x] >> Bread Board L5
           [-] >> Bread board -
   ----------
   
@@ -88,7 +92,7 @@ Motor
 [x] >> Bread Board L2 (Joint 3)
 [x] >> Bread Board L3 (Joint 1)
 [ ]
-[x] >> Bread Board L4 (Joint 2)
+[x] >> Bread Board L5 (Joint 2)
 [x] >> Bread Board L4 (Joint 4)
 [x] >> Bread Board -
 
