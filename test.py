@@ -81,10 +81,57 @@ def AnkleClose():
         GPIO.cleanup()
         return()
 
+def BaseCW():
+        GPIOsetup()
+        print "Test: Base Move Clock-wise"
+        GPIO.output(_BaseCW, On)
+        GPIO.output(_BaseCCW, Off)
+        time.sleep(10)
+        GPIO.output(_BaseCW, Off)
+        GPIO.cleanup()
+        return()
 
+def BaseCCW():
+        GPIOsetup()
+        print "Test: Base Move Counter-Clock-wise"
+        GPIO.output(_BaseCCW, On)
+        GPIO.output(_BaseCW, Off)
+        time.sleep(10)
+        GPIO.output(_BaseCCW, Off)
+        GPIO.cleanup()
+        return()
 
+def AnkelCW():
+        GPIOsetup()
+        print "Test: Base Move Clock-wise"
+        GPIO.output(_AnkelCW, On)
+        GPIO.output(_AnkelCCW, Off)
+        time.sleep(5)
+        GPIO.output(_AnkelCW, Off)
+        GPIO.cleanup()
+        return()
 
-GrapOpen()
-GrapClose()
-AnkleOpen()
-AnkleClose()
+def AnkelCCW():
+        GPIOsetup()
+        print "Test: Base Move Counter-Clock-wise"
+        GPIO.output(_AnkelCCW, On)
+        GPIO.output(_AnkelCW, Off)
+        time.sleep(5)
+        GPIO.output(_AnkelCCW, Off)
+        GPIO.cleanup()
+        return()
+
+def TestJoint():
+        print "Initilize Joint Arm Test\n==================\n"
+        GrapOpen()
+        GrapClose()
+        AnkleOpen()
+        AnkleClose()
+        BaseCW()
+        BaseCCW()
+        AnkelCW()
+        AnkelCCW()
+        print "\nEND Joint Arm Test\n=================="
+        return()
+
+TestJoint()
