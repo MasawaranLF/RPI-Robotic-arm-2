@@ -2,11 +2,23 @@
 
 import RPi.GPIO as GPIO
 import time
-from pinConfig import *
+import pinConfig
+
+_GrapOpen = pinConfig._GrapOpen
+_GrapClose = pinConfig._GrapClose
+_AnkleOpen = pinConfig._AnkleOpen
+_AnkleClose = pinConfig._AnkleClose
+_BaseCW = pinConfig._BaseCW
+_BaseCCW = pinConfig._BaseCCW
+_AnkelCW = pinConfig._AnkelCW
+_AnkelCCW = pinConfig._AnkelCCW
+
+On = pinConfig.On
+Off = pinConfig.Off
 
 
 def GrapOpen():
-        GPIOsetup()
+        pinConfig.GPIOsetup()
         print "Test: GRAP Open"
         GPIO.output(_GrapOpen, On)
         GPIO.output(_GrapClose, Off)
@@ -16,7 +28,7 @@ def GrapOpen():
         return()
 
 def GrapClose():
-        GPIOsetup()
+        pinConfig.GPIOsetup()
         print "Test: GRAP CLOSE"
         GPIO.output(_GrapClose, On)
         GPIO.output(_GrapOpen, Off)
@@ -26,7 +38,7 @@ def GrapClose():
         return()
 
 def AnkleOpen():
-        GPIOsetup()
+        pinConfig.GPIOsetup()
         print "Test: Ankle Open"
         GPIO.output(_AnkleOpen, On)
         GPIO.output(_AnkleClose, Off)
@@ -36,7 +48,7 @@ def AnkleOpen():
         return()
 
 def AnkleClose():
-        GPIOsetup()
+        pinConfig.GPIOsetup()
         print "Test: Ankle CLOSE"
         GPIO.output(_AnkleClose, On)
         GPIO.output(_AnkleOpen, Off)
@@ -46,7 +58,7 @@ def AnkleClose():
         return()
 
 def BaseCW():
-        GPIOsetup()
+        pinConfig.GPIOsetup()
         print "Test: Base Move Clock-wise"
         GPIO.output(_BaseCW, On)
         GPIO.output(_BaseCCW, Off)
@@ -56,7 +68,7 @@ def BaseCW():
         return()
 
 def BaseCCW():
-        GPIOsetup()
+        pinConfig.GPIOsetup()
         print "Test: Base Move Counter-Clock-wise"
         GPIO.output(_BaseCCW, On)
         GPIO.output(_BaseCW, Off)
@@ -66,7 +78,7 @@ def BaseCCW():
         return()
 
 def AnkelCW():
-        GPIOsetup()
+        pinConfig.GPIOsetup()
         print "Test: Base Move Clock-wise"
         GPIO.output(_AnkelCW, On)
         GPIO.output(_AnkelCCW, Off)
@@ -76,7 +88,7 @@ def AnkelCW():
         return()
 
 def AnkelCCW():
-        GPIOsetup()
+        pinConfig.GPIOsetup()
         print "Test: Base Move Counter-Clock-wise"
         GPIO.output(_AnkelCCW, On)
         GPIO.output(_AnkelCW, Off)

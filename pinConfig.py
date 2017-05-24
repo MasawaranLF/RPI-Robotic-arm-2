@@ -1,4 +1,6 @@
 
+import RPi.GPIO as GPIO
+
 # Rasberry pi GPIO pin config
 
 _GrapOpen = 17
