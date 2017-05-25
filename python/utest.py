@@ -1,29 +1,30 @@
 import time
-import pinConfig
+
+from python import _pinConfig
 
 ## Unit test before intregrate with html
 
 print "Debug: Initialization "
-pinConfig.Init()
+_pinConfig.Init()
 
 print "Debug: Scenario 1 : Normal"
-pinConfig.doGrapOpen()
+_pinConfig.doGrapOpen()
 time.sleep(5)
-pinConfig.stopGrap()
+_pinConfig.stopGrap()
 
 print "Debug: Scenario 2 : Interupt"
-pinConfig.doGrapClose()
+_pinConfig.doGrapClose()
 time.sleep(2)
-pinConfig.doGrapOpen()
+_pinConfig.doGrapOpen()
 time.sleep(2)
-pinConfig.stopGrap()
+_pinConfig.stopGrap()
 
 print "Debug: Scenario 3 : No Close 10 sec"
-pinConfig.doGrapClose()
+_pinConfig.doGrapClose()
 time.sleep(2)
-pinConfig.doGrapOpen()
-pinConfig.doGrapClose()
+_pinConfig.doGrapOpen()
+_pinConfig.doGrapClose()
 time.sleep(10)
 print "Debug: Ending 3 "
-pinConfig.stopGrap()
+_pinConfig.stopGrap()
 
