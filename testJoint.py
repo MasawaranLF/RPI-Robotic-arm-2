@@ -1,8 +1,8 @@
-
+import time
 
 import RPi.GPIO as GPIO
-import time
-import pinConfig
+
+from config import pinConfig
 
 _GrapOpen = pinConfig._GrapOpen
 _GrapClose = pinConfig._GrapClose

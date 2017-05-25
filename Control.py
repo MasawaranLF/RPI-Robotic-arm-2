@@ -1,7 +1,8 @@
+import time
 
 import RPi.GPIO as GPIO
-import time
-from pinConfig import *
+
+from config.pinConfig import *
 
 
 def GrapOpen(t=1):

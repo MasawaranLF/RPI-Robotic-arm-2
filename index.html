@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div style="alignment: center">
+<button type="button" class="open" id="open" onclick="#" >Grap Open</button>
+</div>
+
+
+</body>
+
+<script>
+    $(document).ready(function() {
+
+    $("#open").click(function(){
+     $.ajax({
+          url:"GrapOpen.py", success: function(){alert("DONE");}
+     });
+      });
+    });
+
+</script>
+</html>
