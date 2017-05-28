@@ -108,6 +108,24 @@ Give examples
 
 ### Installing
 
+```
+sudo apt-get install lighttpd
+
+
+sudo apt-get install php5-common php5-cgi php5
+
+sudo lighty-enable-mod fastcgi-php
+
+sudo service lighttpd force-reload
+
+sudo chown www-data:www-data /var/www
+
+sudo usermod -a -G www-data pi
+
+```
+
+
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details

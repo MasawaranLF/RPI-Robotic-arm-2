@@ -1,6 +1,6 @@
 import time
 
-from python import _pinConfig
+import _pinConfig
 
 ## Unit test before intregrate with html
 

@@ -97,9 +97,13 @@ box-shadow: none;
 			</div>
 
 			<div class="login-form">
+<div>
+                    <button onclick=<?php exec("python python/GrapOpen.py") ?>Run Perl</button>
+                    <button onclick=<?php exec('python python/GrapStop.py') ?>Run Stop</button>
 
+                    </div>
 
-                <a class="btn btn-primary btn-large btn-block" id="GrapOpen"  href="#">Grap Open</a>
+                <a class="btn btn-primary btn-large btn-block" id="GrapOpen"   href="#">Grap Open</a>
                 <br>
                 <a class="btn btn-primary btn-large btn-block" id="GrapClose"  href="#">Grap Close</a>
 
@@ -118,8 +122,12 @@ box-shadow: none;
 
     $("#GrapOpen").click(function(){
         $.ajax({
-          url:"python/GrapOpen.py", success: function(){
-            }
+          type: "POST",
+          url: "python/GrapOpen.py",
+          data: {  }
+        }).done(function( o ) {
+           // do something
+
         });
     });
 
