@@ -1,6 +1,12 @@
 # RPI-Robotic-arm-2
 
-RPI IOT for ROBOT ARM 2 [ MR-999 ] With battery
+RPI IOT for ROBOT ARM 2 [ MR-999 ] With battery,Modulable (still can hotplug switch to their remote-controller)
+
+
+ps. This project is done ^^. 
+
+Recomend for people who already have the Robot arm because in fact the robot arm is have a poor performance (use motor) and can lift only a small and light weight object. 
+
 
 ## Hardware
 
@@ -70,6 +76,9 @@ Bread Board
 ```
 L1-L4
 [Bread board +][Bread board -][L1]
+[Bread board +][Bread board -][L2]
+[Bread board +][Bread board -][L3]
+[Bread board +][Bread board -][L4]
 ...
 
 
@@ -87,45 +96,43 @@ Motor
  Joint 4 (Ankle - cw, ccw)
 ---------------------------------
 
+
+Robot Pin
+----------------------------------
 [x] >> Bread Board +
 [x] >> Bread Board L1 (Grapper)
 [x] >> Bread Board L2 (Joint 3)
 [x] >> Bread Board L3 (Joint 1)
-[ ]
+[ ]                              >>(this is the other joint but need more ch 2 relay)
 [x] >> Bread Board L5 (Joint 2)
 [x] >> Bread Board L4 (Joint 4)
 [x] >> Bread Board -
 
+----------------------------------
 
 ```
 
 
 ### Logic
-
-```
 Give examples
 ```
++ connect to L1 Grapper open
+- connect to L1 Grapper will close
+```
+*** same as other Joint
+
 
 ### Installing
 
 ```
-sudo apt-get install lighttpd
-
-
-sudo apt-get install php5-common php5-cgi php5
-
-sudo lighty-enable-mod fastcgi-php
-
-sudo service lighttpd force-reload
-
-sudo chown www-data:www-data /var/www
-
-sudo usermod -a -G www-data pi
-
-Install flask
-
+##Install flask
 sudo apt-get install python-pip python-flask
 
+##make the dir as you want and put the script in it.
+cd /yourdir
+sudo python app.py
+
+## now you can access the rpi via web browser Enjoy ><
 ```
 
 
