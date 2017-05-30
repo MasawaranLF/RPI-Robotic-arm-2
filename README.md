@@ -122,6 +122,10 @@ sudo chown www-data:www-data /var/www
 
 sudo usermod -a -G www-data pi
 
+Install flask
+
+sudo apt-get install python-pip python-flask
+
 ```
 
 

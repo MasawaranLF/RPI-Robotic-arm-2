@@ -98,7 +98,7 @@ box-shadow: none;
 
 			<div class="login-form">
 <div>
-                    <button onclick=<?php exec("python python/GrapOpen.py") ?>Run Perl</button>
+                    <button onclick="func()" ?>Run Perl</button>
                     <button onclick=<?php exec('python python/GrapStop.py') ?>Run Stop</button>
 
                     </div>
@@ -117,7 +117,10 @@ box-shadow: none;
 
 <script>
 
-
+function func()
+{
+    document.location="cgi-bin/GrapOpen.py";
+}
     $(document).ready(function() {
 
     $("#GrapOpen").click(function(){
